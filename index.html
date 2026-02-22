@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BNYS4U Smart Wellness Card</title>
 <link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#4e744e">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
@@ -14,6 +12,7 @@
     <h1>BNYS4U Smart Wellness Card</h1>
     <p class="tagline">Tap into Ayurveda, Anytime, Anywhere</p>
 
+    <!-- Home Section -->
     <div class="section" id="home">
       <h2>Welcome</h2>
       <p>Discover Ayurvedic wellness tips, dosha quiz, and book appointments instantly.</p>
@@ -23,6 +22,7 @@
       <button onclick="showSection('qrcodeSection'); generateQRCode();">Show QR Code</button>
     </div>
 
+    <!-- Dosha Quiz -->
     <div class="section" id="dosha">
       <h2>Dosha Quiz</h2>
       <form id="doshaForm">
@@ -32,18 +32,21 @@
           <option value="Pitta">Strong</option>
           <option value="Kapha">Slow</option>
         </select>
+
         <label>2. Energy levels throughout the day?</label>
         <select id="q2">
           <option value="Vata">High/Low fluctuating</option>
           <option value="Pitta">Moderate/Focused</option>
           <option value="Kapha">Steady/Slow</option>
         </select>
+
         <button type="button" onclick="calculateDosha()">Submit</button>
       </form>
       <p id="doshaResult"></p>
       <button onclick="showSection('home')">Back Home</button>
     </div>
 
+    <!-- Herbal Guides -->
     <div class="section" id="herbs">
       <h2>Herbal Guides</h2>
       <ul>
@@ -55,6 +58,7 @@
       <button onclick="showSection('home')">Back Home</button>
     </div>
 
+    <!-- Appointment Booking -->
     <div class="section" id="appointment">
       <h2>Book Appointment</h2>
       <form id="appointmentForm">
@@ -70,6 +74,7 @@
       <button onclick="showSection('home')">Back Home</button>
     </div>
 
+    <!-- QR Code Section -->
     <div class="section" id="qrcodeSection">
       <h2>Scan to Open BNYS4U Card</h2>
       <p>Click below to generate your personalized QR code automatically:</p>
@@ -78,6 +83,7 @@
       <button onclick="showSection('home')">Back Home</button>
     </div>
 
+    <!-- Contact -->
     <div class="contact">
       <h3>Contact BNYS4U</h3>
       <p>Email: bnys4u@example.com</p>
@@ -87,6 +93,4 @@
 
 <script src="script.js"></script>
 </body>
-          </html>
-
-
+</html>
