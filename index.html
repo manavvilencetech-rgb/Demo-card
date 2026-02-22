@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BNYS4U Smart Wellness Card</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#4e744e">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="card">
+    <h1>BNYS4U Smart Wellness Card</h1>
+    <p class="tagline">Tap into Ayurveda, Anytime, Anywhere</p>
+
+    <div class="section" id="home">
+      <h2>Welcome</h2>
+      <p>Discover Ayurvedic wellness tips, dosha quiz, and book appointments instantly.</p>
+      <button onclick="showSection('dosha')">Take Dosha Quiz</button>
+      <button onclick="showSection('herbs')">Herbal Guides</button>
+      <button onclick="showSection('appointment')">Book Appointment</button>
+      <button onclick="showSection('qrcodeSection'); generateQRCode();">Show QR Code</button>
+    </div>
+
+    <div class="section" id="dosha">
+      <h2>Dosha Quiz</h2>
+      <form id="doshaForm">
+        <label>1. How is your digestion?</label>
+        <select id="q1">
+          <option value="Vata">Irregular</option>
+          <option value="Pitta">Strong</option>
+          <option value="Kapha">Slow</option>
+        </select>
+        <label>2. Energy levels throughout the day?</label>
+        <select id="q2">
+          <option value="Vata">High/Low fluctuating</option>
+          <option value="Pitta">Moderate/Focused</option>
+          <option value="Kapha">Steady/Slow</option>
+        </select>
+        <button type="button" onclick="calculateDosha()">Submit</button>
+      </form>
+      <p id="doshaResult"></p>
+      <button onclick="showSection('home')">Back Home</button>
+    </div>
+
+    <div class="section" id="herbs">
+      <h2>Herbal Guides</h2>
+      <ul>
+        <li><b>Immunity:</b> Ashwagandha, Tulsi, Giloy</li>
+        <li><b>Digestion:</b> Triphala, Ginger, Fennel</li>
+        <li><b>Sleep:</b> Brahmi, Jatamansi, Valerian</li>
+        <li><b>Stress:</b> Shankhapushpi, Ashwagandha</li>
+      </ul>
+      <button onclick="showSection('home')">Back Home</button>
+    </div>
+
+    <div class="section" id="appointment">
+      <h2>Book Appointment</h2>
+      <form id="appointmentForm">
+        <label>Name:</label>
+        <input type="text" id="name" required>
+        <label>Phone/WhatsApp:</label>
+        <input type="text" id="phone" required>
+        <label>Preferred Date:</label>
+        <input type="date" id="date" required>
+        <button type="button" onclick="submitAppointment()">Submit</button>
+      </form>
+      <p id="appointmentResult"></p>
+      <button onclick="showSection('home')">Back Home</button>
+    </div>
+
+    <div class="section" id="qrcodeSection">
+      <h2>Scan to Open BNYS4U Card</h2>
+      <p>Click below to generate your personalized QR code automatically:</p>
+      <button onclick="generateAutoQR()">Generate My QR Code</button>
+      <div id="qrcode" style="margin-top: 20px;"></div>
+      <button onclick="showSection('home')">Back Home</button>
+    </div>
+
+    <div class="contact">
+      <h3>Contact BNYS4U</h3>
+      <p>Email: bnys4u@example.com</p>
+      <p>WhatsApp: <a href="https://wa.me/918858102095" target="_blank">+91 8858102095</a></p>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+          </html>
+
+
