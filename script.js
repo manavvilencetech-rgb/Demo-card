@@ -40,7 +40,8 @@ function generateQRWithPatient(patientID){
   const url = patientID ? `index.html?patient=${encodeURIComponent(patientID)}` : 'index.html';
   const qrDiv = document.getElementById('qrcode'); qrDiv.innerHTML='';
   new QRCode(qrDiv, { text: url, width: 180, height: 180 });
-  alert("Your QR code is ready!");
+  alert("Your QR code is ready! Scan it to access your BNYS4U card.");
+  
 }
 
 // Personalized greeting
